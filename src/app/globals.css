@@ -1,26 +1,323 @@
 @import "tailwindcss";
 
+/* ===== VARIÁVEIS DE CORES E CONFIGURAÇÕES BÁSICAS ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores customizadas para o YouTube MP3 Bot Landing Page */
+  --whatsapp-green: #1DA851; /* Usado em fundos claros para bom contraste */
+  --youtube-red: #D00000; /* Usado em fundos claros para bom contraste */
+  --premium-purple: #5840C7; /* Usado em fundos claros para bom contraste */
+  --gold: #D6A300; /* Cor dourada definida explicitamente */
+  --dark-bg: #121212;
+  --dark-bg-lighter: #232323;
+  --light-bg: #FFFFFF;
+  --light-text: #FFFFFF;
+  --dark-text: #121212;
+  --gray-text-dark: #E9E9E9; /* Texto claro para fundos escuros */
+  --gray-text-light: #333333; /* Texto escuro para fundos claros */
+  
+  /* Cores padrão */
+  --background: var(--light-bg);
+  --foreground: var(--dark-text);
 }
 
+/* Configurações do tema padrão */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Montserrat', var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Configurações para dark mode (se necessário) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--dark-bg);
+    --foreground: var(--light-text);
+    /* Ajustes para melhor contraste em modo escuro */
+    --whatsapp-green: #25D366;
+    --youtube-red: #FF0000;
+    --premium-purple: #7C6AFF;
   }
 }
 
+/* ===== ESTILOS GLOBAIS BÁSICOS ===== */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* ===== SISTEMA DE CONTRASTE PARA FUNDOS CLAROS ===== */
+/* Textos em fundos claros devem usar cores escuras */
+.bg-white, 
+.bg-gray-50, 
+.bg-gray-100, 
+.bg-light-bg {
+  color: var(--dark-text);
+}
+
+/* Cabeçalhos em fundos claros */
+.bg-white h1,
+.bg-white h2,
+.bg-white h3,
+.bg-white h4,
+.bg-white h5,
+.bg-white h6,
+.bg-gray-50 h1,
+.bg-gray-50 h2,
+.bg-gray-50 h3,
+.bg-gray-50 h4,
+.bg-gray-50 h5,
+.bg-gray-50 h6,
+.bg-gray-100 h1,
+.bg-gray-100 h2,
+.bg-gray-100 h3,
+.bg-gray-100 h4,
+.bg-gray-100 h5,
+.bg-gray-100 h6,
+.bg-light-bg h1,
+.bg-light-bg h2,
+.bg-light-bg h3,
+.bg-light-bg h4,
+.bg-light-bg h5,
+.bg-light-bg h6 {
+  color: var(--dark-text);
+}
+
+/* Parágrafos em fundos claros */
+.bg-white p,
+.bg-gray-50 p,
+.bg-gray-100 p,
+.bg-light-bg p {
+  color: var(--gray-text-light);
+}
+
+/* ===== SISTEMA DE CONTRASTE PARA FUNDOS ESCUROS ===== */
+/* Textos em fundos escuros devem ser claros */
+.bg-dark-bg, 
+.bg-black, 
+.bg-youtube-red, 
+.bg-whatsapp-green, 
+.bg-premium-purple, 
+.bg-gray-800, 
+.bg-gray-900 {
+  color: var(--light-text);
+}
+
+/* Cabeçalhos em fundos escuros */
+.bg-dark-bg h1,
+.bg-dark-bg h2,
+.bg-dark-bg h3,
+.bg-dark-bg h4,
+.bg-dark-bg h5,
+.bg-dark-bg h6,
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-youtube-red h1,
+.bg-youtube-red h2,
+.bg-youtube-red h3,
+.bg-youtube-red h4,
+.bg-youtube-red h5,
+.bg-youtube-red h6,
+.bg-whatsapp-green h1,
+.bg-whatsapp-green h2,
+.bg-whatsapp-green h3,
+.bg-whatsapp-green h4,
+.bg-whatsapp-green h5,
+.bg-whatsapp-green h6,
+.bg-premium-purple h1,
+.bg-premium-purple h2,
+.bg-premium-purple h3,
+.bg-premium-purple h4,
+.bg-premium-purple h5,
+.bg-premium-purple h6,
+.bg-gray-800 h1,
+.bg-gray-800 h2,
+.bg-gray-800 h3,
+.bg-gray-800 h4,
+.bg-gray-800 h5,
+.bg-gray-800 h6,
+.bg-gray-900 h1,
+.bg-gray-900 h2,
+.bg-gray-900 h3,
+.bg-gray-900 h4,
+.bg-gray-900 h5,
+.bg-gray-900 h6 {
+  color: var(--light-text);
+}
+
+/* Parágrafos em fundos escuros */
+.bg-dark-bg p,
+.bg-black p,
+.bg-youtube-red p,
+.bg-whatsapp-green p,
+.bg-premium-purple p,
+.bg-gray-800 p,
+.bg-gray-900 p {
+  color: var(--gray-text-dark);
+}
+
+/* ===== ESTILOS PARA BOTÕES ===== */
+/* Botões em fundos claros */
+.bg-white a.rounded-full,
+.bg-white a.rounded-lg,
+.bg-white button.rounded-full,
+.bg-white button.rounded-lg,
+.bg-gray-50 a.rounded-full,
+.bg-gray-50 a.rounded-lg,
+.bg-gray-50 button.rounded-full,
+.bg-gray-50 button.rounded-lg,
+.bg-gray-100 a.rounded-full,
+.bg-gray-100 a.rounded-lg,
+.bg-gray-100 button.rounded-full,
+.bg-gray-100 button.rounded-lg,
+.bg-light-bg a.rounded-full,
+.bg-light-bg a.rounded-lg,
+.bg-light-bg button.rounded-full,
+.bg-light-bg button.rounded-lg {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Botões em fundos escuros */
+.bg-dark-bg a.rounded-full,
+.bg-dark-bg a.rounded-lg,
+.bg-dark-bg button.rounded-full,
+.bg-dark-bg button.rounded-lg,
+.bg-black a.rounded-full,
+.bg-black a.rounded-lg,
+.bg-black button.rounded-full,
+.bg-black button.rounded-lg,
+.bg-gray-800 a.rounded-full,
+.bg-gray-800 a.rounded-lg,
+.bg-gray-800 button.rounded-full,
+.bg-gray-800 button.rounded-lg,
+.bg-gray-900 a.rounded-full,
+.bg-gray-900 a.rounded-lg,
+.bg-gray-900 button.rounded-full,
+.bg-gray-900 button.rounded-lg {
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* ===== ESTILOS PARA CARDS E CAIXAS ===== */
+/* Cards em fundos claros */
+.bg-white .rounded-xl,
+.bg-white .rounded-2xl,
+.bg-gray-50 .rounded-xl,
+.bg-gray-50 .rounded-2xl,
+.bg-gray-100 .rounded-xl,
+.bg-gray-100 .rounded-2xl,
+.bg-light-bg .rounded-xl,
+.bg-light-bg .rounded-2xl {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Cards em fundos escuros */
+.bg-dark-bg .rounded-xl,
+.bg-dark-bg .rounded-2xl,
+.bg-black .rounded-xl,
+.bg-black .rounded-2xl,
+.bg-gray-800 .rounded-xl,
+.bg-gray-800 .rounded-2xl,
+.bg-gray-900 .rounded-xl,
+.bg-gray-900 .rounded-2xl {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== CORREÇÕES ESPECÍFICAS ===== */
+
+/* Seção FAQ: Melhor contraste para fundo escuro */
+section#faq .bg-dark-bg {
+  background-color: var(--dark-bg);
+}
+section#faq .bg-dark-bg h3 {
+  color: var(--light-text);
+}
+section#faq .bg-dark-bg p {
+  color: var(--gray-text-dark);
+}
+section#faq .bg-dark-bg a {
+  color: var(--light-text);
+}
+
+/* Tag "POPULAR" */
+.bg-gold.absolute.top-5.right-5 {
+  color: var(--dark-text);
+  background-color: var(--gold);
+}
+.bg-gold.absolute.top-5.right-5 span {
+  color: var(--dark-text);
+}
+
+/* Botões específicos para "Assinar Agora" e "Experimentar agora" */
+a[href*="plano%20premium"],
+a[href*="plano%20premium"] span,
+a[href*="wa.me"],
+a[href*="wa.me"] span {
+  color: var(--light-text);
+}
+
+/* ===== UTILITÁRIOS DE CORES ===== */
+.text-white {
+  color: var(--light-text);
+}
+
+.text-whatsapp-green {
+  color: var(--whatsapp-green);
+}
+
+.text-youtube-red {
+  color: var(--youtube-red);
+}
+
+.text-dark-bg {
+  color: var(--dark-text);
+}
+
+/* Escala de cinza ajustada para garantir bom contraste */
+.text-gray-100 { color: #f3f4f6; }
+.text-gray-200 { color: #e5e7eb; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-700 { color: #374151; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-900 { color: #111827; }
+
+/* Sutil text-shadow para títulos */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 1px rgba(0,0,0,0.05);
+}
+
+/* ===== UTILITÁRIOS DE CORES PERSONALIZADAS ===== */
+@layer utilities {
+  .whatsapp-green-bg { background-color: var(--whatsapp-green); }
+  .youtube-red-bg { background-color: var(--youtube-red); }
+  .premium-purple-bg { background-color: var(--premium-purple); }
+  .gold-bg { background-color: var(--gold); }
+  
+  .text-whatsapp-green { color: var(--whatsapp-green); }
+  .text-youtube-red { color: var(--youtube-red); }
+  .text-premium-purple { color: var(--premium-purple); }
+  .text-dark-bg { color: var(--dark-text); }
+  .text-light-bg { color: var(--light-text); }
+  .text-gold { color: var(--gold); }
+  
+  .bg-gold { background-color: var(--gold); }
+  
+  /* Efeitos "glass" com transparência e backdrop */
+  .glass-dark {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    color: var(--light-text);
+  }
+  .glass-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    color: var(--dark-text);
+  }
 }
