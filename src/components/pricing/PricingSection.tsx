@@ -71,10 +71,6 @@ const PricingSection = () => {
                   <FaTimesCircle className="text-gray-400 mr-3 flex-shrink-0" size={18} />
                   <span className="text-gray-500">Sem prioridade na fila</span>
                 </li>
-                <li className="flex items-center">
-                  <FaTimesCircle className="text-gray-400 mr-3 flex-shrink-0" size={18} />
-                  <span className="text-gray-500">Conversão com marca d&apos;água de áudio</span>
-                </li>
               </ul>
             </div>
           </motion.div>
@@ -120,10 +116,6 @@ const PricingSection = () => {
                 <li className="flex items-center">
                   <FaCheckCircle className="text-green-500 mr-3 flex-shrink-0" size={18} />
                   <span className="text-gray-700">Prioridade na fila de conversão</span>
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-green-500 mr-3 flex-shrink-0" size={18} />
-                  <span className="text-gray-700">Sem marca d&apos;água de áudio</span>
                 </li>
                 <li className="flex items-center">
                   <FaCheckCircle className="text-green-500 mr-3 flex-shrink-0" size={18} />
