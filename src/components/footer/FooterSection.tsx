@@ -15,19 +15,19 @@ const FooterSection = () => {
               A maneira mais rápida e fácil de converter seus vídeos favoritos do YouTube em arquivos MP3 de alta qualidade, direto pelo WhatsApp.
             </p>
             <div className="flex space-x-4">
-              <a href="https://wa.me/+55XXXXXXXXXX" className="text-green-600 hover:text-white transition-colors">
+              <a href="https://wa.me/+5517991129386" className="text-green-600 hover:text-white transition-colors">
                 <FaWhatsapp size={24} className="shadow-sm hover:shadow-md" />
               </a>
               <a href="#" className="text-red-600 hover:text-white transition-colors">
                 <FaYoutube size={24} className="shadow-sm hover:shadow-md" />
               </a>
-              <a href="#" className="text-purple-600 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/dgsolutionweb" className="text-purple-600 hover:text-white transition-colors">
                 <FaInstagram size={24} className="shadow-sm hover:shadow-md" />
               </a>
-              <a href="#" className="text-blue-500 hover:text-white transition-colors">
+              <a href="https://twitter.com/dgsolutionweb" className="text-blue-500 hover:text-white transition-colors">
                 <FaTwitter size={24} className="shadow-sm hover:shadow-md" />
               </a>
-              <a href="#" className="text-blue-700 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/dgsolutionweb" className="text-blue-700 hover:text-white transition-colors">
                 <FaFacebook size={24} className="shadow-sm hover:shadow-md" />
               </a>
             </div>
@@ -81,7 +81,7 @@ const FooterSection = () => {
               Dúvidas ou sugestões? Entre em contato conosco:
             </p>
             <a 
-              href="https://wa.me/+55XXXXXXXXXX" 
+              href="https://wa.me/+5517991129386" 
               className="inline-flex items-center gap-2 bg-green-600 px-4 py-2 rounded-full text-white font-bold hover:bg-green-500 transition-all shadow-sm hover:shadow-md border border-white/10"
             >
               <FaWhatsapp size={20} />

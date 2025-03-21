@@ -38,7 +38,7 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.a
-              href="https://wa.me/+55XXXXXXXXXX"
+              href="https://wa.me/+5517991129386"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-8 rounded-full inline-flex items-center justify-center gap-2 shadow-lg border border-white/30 hover:shadow-xl"

@@ -45,7 +45,7 @@ const PricingSection = () => {
                 <span className="text-gray-600 ml-2">/ grátis para sempre</span>
               </div>
               <a 
-                href="https://wa.me/+55XXXXXXXXXX?text=Quero%20usar%20o%20plano%20gratuito" 
+                href="https://wa.me/+5517991129386?text=Quero%20usar%20o%20plano%20gratuito" 
                 className="block w-full py-3 px-6 text-center bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg transition-colors shadow-md border border-white/30 hover:shadow-xl"
               >
                 <span className="text-white font-bold">Começar Agora</span>
@@ -99,7 +99,7 @@ const PricingSection = () => {
                 <span className="text-gray-600 ml-2">/ mês</span>
               </div>
               <a 
-                href="https://wa.me/+55XXXXXXXXXX?text=Quero%20assinar%20o%20plano%20premium" 
+                href="https://wa.me/+5517991129386?text=!assinar" 
                 className="block w-full py-3 px-6 text-center bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg transition-colors shadow-md border border-white/30 hover:shadow-xl"
               >
                 <span className="text-white font-bold">Assinar Agora</span>

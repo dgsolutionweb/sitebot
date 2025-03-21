@@ -126,7 +126,7 @@ const FeaturesSection = () => {
           className="mt-16 text-center"
         >
           <a 
-            href="https://wa.me/+55XXXXXXXXXX"
+            href="https://wa.me/+5517991129386"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all border border-white/30 hover:shadow-xl"

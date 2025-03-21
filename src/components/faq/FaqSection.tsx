@@ -108,7 +108,7 @@ const FaqSection = () => {
               Entre em contato diretamente conosco no WhatsApp para suporte prioritário. Estamos sempre prontos para ajudar!
             </p>
             <a 
-              href="https://wa.me/+55XXXXXXXXXX?text=Tenho%20uma%20dúvida%20sobre%20o%20YouTube%20MP3%20Bot" 
+              href="https://wa.me/+5517991129386?text=Tenho%20uma%20dúvida%20sobre%20o%20YouTube%20MP3%20Bot" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all border border-white/30 hover:shadow-xl"
